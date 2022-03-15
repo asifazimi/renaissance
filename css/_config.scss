@@ -1,0 +1,77 @@
+$primary-color: #151516;
+// $secondary-color: #20232a;
+$secondary-color: #002240;
+$header-color: #f5f6f7;
+$background-color: #ffffff;
+$button-color: #61dafb;
+$button: #e2124a;
+// $nav-color: #18191a;
+$nav-color: #20232a;
+$font-family: "Open Sans", sans-serif;
+
+// Persian Font Famliy
+// @font-face {
+//   font-family: "Yekan";
+//   src: url("Yekan-Font-3.0/Yekan.eot"); /* IE9 Compat Modes */
+//   src: url("Yekan-Font-3.0/Yekan.eot?#iefix") format("embedded-opentype"),
+//     /* IE6-IE8 */ url("Yekan-Font-3.0/Yekan.woff2") format("woff2"),
+//     /* Modern Browsers */ url("Yekan-Font-3.0/Yekan.woff") format("woff"),
+//     /* Modern Browsers */ url("Yekan-Font-3.0/Yekan.otf") format("opentype"),
+//     /* Open Type Font */ url("Yekan-Font-3.0/Yekan.ttf") format("truetype"); /* Safari, Android, iOS */
+//   font-weight: normal;
+//   font-style: normal;
+//   text-rendering: optimizeLegibility;
+//   font-display: auto;
+// }
+
+// Persian Font Famliy
+@font-face {
+  font-family: "Yekan";
+  src: url(Yekan/Yekan.eot);
+  src: url(Yekan/Yekan.eot?#iefix) format("embedded-opentype"),
+    url(Yekan/Yekan.woff) format("woff"),
+    url(Yekan/Yekan.ttf) format("truetype"),
+    url(Yekan/Yekan.svg#BYekan) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin transition-mode {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin media-sms {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin media-mdm {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}

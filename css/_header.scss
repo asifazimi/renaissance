@@ -1,0 +1,168 @@
+.main-header {
+  position: fixed;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  height: 60px;
+  background-color: $secondary-color;
+
+  a {
+    text-decoration: none;
+    color: $header-color;
+  }
+
+  nav {
+    .nav-links {
+      list-style: none;
+      display: flex;
+
+      .nav-link {
+        margin-left: 1.7rem;
+        display: block;
+        transition: 0.3s linear;
+
+        a {
+          margin: 0.2rem;
+          padding: 0.8rem 0;
+          font-size: 1em;
+          // word-spacing: -2px;
+        }
+
+        a:hover {
+          color: $button-color;
+          @include transition-mode;
+        }
+
+        .arrow-down {
+          font-size: 0.6em;
+          position: relative;
+          top: 2px;
+          right: 1px;
+          color: #ffffff;
+
+          i {
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        &:hover .arrow-down i {
+          transform: rotate(180deg);
+        }
+
+        ul {
+          position: absolute;
+          // background-color: $secondary-color;
+          background-color: #ffffff;
+          // margin-top: 0.95rem;
+          // margin-top: 0.94rem;
+          margin-top: 0.5rem;
+          padding-top: 0.4rem;
+          padding-bottom: 0.3rem;
+          // border-bottom-left-radius: 4px;
+          // border-bottom-right-radius: 4px;
+          border-radius: 5px;
+          pointer-events: auto;
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+          animation: fadeDropdown 0.2s; /* required for the fade animation */
+
+          a {
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+            font-size: 0.83em;
+            // color: $header-color;
+            color: #1c1e21;
+            padding: 0.1rem 0.7rem;
+            display: block;
+            border-radius: 3px;
+          }
+
+          a:hover {
+            background-color: #f2f2f2;
+            color: #1c1e21;
+          }
+        }
+
+        .btn-toggle {
+          background: transparent;
+          border: transparent;
+          color: $header-color;
+          @include transition-mode;
+        }
+
+        // submenu
+        .sub-menu-learning {
+          min-width: 140px;
+          height: 80px;
+          max-height: 80px;
+        }
+
+        .sub-menu {
+          display: none;
+        }
+
+        &:hover .sub-menu {
+          display: block;
+        }
+
+        // Show Submenu
+        .showMenu {
+          display: block;
+        }
+
+        .plus {
+          display: block;
+          transition: all 0.3s ease;
+        }
+
+        &:hover .plus {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 40px;
+      display: block;
+    }
+  }
+
+  // Mobile Menu Navbar
+  .sidebar-toggle {
+    background: transparent;
+    color: $header-color;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    // font-size: 1.4em;
+    cursor: pointer;
+    @include transition-mode;
+    display: none;
+    z-index: 1;
+
+    .icon-close {
+      display: none;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
